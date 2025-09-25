@@ -110,6 +110,7 @@ def secretaria():
     professor()
     aluno()
     zelador()
+    
 secretaria()
 
 git config --global user.email "kaduemanuel7@gmail.com"
