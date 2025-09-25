@@ -94,7 +94,7 @@ def secretaria():
                     materiais[nome_material] += quantidade 
                 else:
                     materiais[nome_material] = quantidade
-                    print(f"{quantidade}{nome_material} adicionados. Total {materiais[nome_material]}")
+                    print(f"{quantidade}{nome_material} adicionados a. Total {materiais[nome_material]}")
             def mostrar_materiais():
                 print("Lista de Materiais")
                 for material, quantidade in materiais.items():
