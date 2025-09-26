@@ -35,3 +35,7 @@ moto2.acelerar(200)
 moto1.frear(30)
 moto2.frear(50)
 
+if moto1.velocidade > moto2.velocidade:
+    print(f"A moto Africa Twin 1100 ganhou")
+else:
+    print(f"A moto BMW GS 1300 ganhou")    
