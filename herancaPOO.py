@@ -6,15 +6,30 @@ class Pessoa:
     def apresentar(self) -> str:
         return f"Olá, meu nome é {self.nome}, CPF: {self.cpf}."
     
-
 class Aluno(Pessoa):
-    def __init__(self, nome: str, cpf: str, matricula: str) -> None:
+    def __init__(self, nome= None, cpf= None, matricula= None):
+        if nome is None:
+            nome = input("Nome do aluno: ")
+        if cpf is None:
+            cpf = input("CPF do aluno: ")
+        if matricula is None:
+            matricula = input("Matrícula do aluno: ")
+
         super().__init__(nome, cpf)
         self.matricula = matricula
 
-    def apresentar(self) -> str:
+    def apresentar(self):
         base = super().apresentar()
-        return f"{base} Sou aluno, matrícula {self.matricula}."
+        return f"{base} Sou aluno, matrícula {self.matricula} e CPF {self.cpf}."
+
+# class Aluno(Pessoa):
+#     def __init__(self, nome: str, cpf: str, matricula: str) -> None:
+#         super().__init__(nome, cpf)
+#         self.matricula = matricula
+
+#     def apresentar(self) -> str:
+#         base = super().apresentar()
+#         return f"{base} Sou aluno, matrícula {self.matricula}."
     
 class Professor(Aluno):
     def __init__(self, nome = None, matricula= None, disciplina= None, cpf= None) -> None:
@@ -27,7 +42,7 @@ class Professor(Aluno):
         if matricula is None:
             matricula = input("Matrícula do professor: ")
 
-        super().__init__(nome, matricula, cpf)
+        super().__init__(nome,cpf, matricula)
         self.disciplina = disciplina
 
     def apresentar(self):
@@ -35,11 +50,11 @@ class Professor(Aluno):
         return f"{base} Sou professor da disciplina {self.disciplina} com matrícula {self.matricula} e CPF {self.cpf}."
 
 p = Pessoa("João", "111.222.333-44")
-a = Aluno("Ana", "555.666.777-88", "A123")
+a = Aluno()
 pr = Professor()
         
 print(p.apresentar())
-print(a.apresentar())      
+#print(a.apresentar())      
 print(pr.apresentar())
 # class Professor(Pessoa):
 #     def __init__(self, nome: str, cpf: str, disciplina: str) -> None:
