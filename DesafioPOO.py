@@ -19,13 +19,9 @@ class Jogador(Pessoa):
             posicao = input("Posição do jogador: ")
         if numero is None:
             numero = int(input("Número do jogador: "))
-        
         super().__init__(nome, idade)
         self.posicao = posicao
         self.numero = numero
-
-        def apresentar(self):
-            return f"Jogador {self.nome}, Idade: {self.idade}, Posição: {self.posicao}, Número: {self.numero}."
 
 class Tecnico(Pessoa):
     def __init__(self, nome: str = None, idade: int = None, experiencia: int = None):
@@ -39,9 +35,7 @@ class Tecnico(Pessoa):
         super().__init__(nome, idade)
         self.experiencia = experiencia  
 
-        def apresentar(self):
-            return f"Técnico {self.nome}, Idade: {self.idade}, Experiência: {self.experiencia} anos."              
-
+    
 class Clube:
     def __init__(self, nome):
         self.nome = nome
@@ -98,8 +92,6 @@ def menu_pricipal():
         if escolha == '5':
             print("Saindo do programa.")
             break
-        else:
-            print("Opção inválida. Tente novamente.")
 
 if __name__ == "__main__":
     menu_pricipal()
