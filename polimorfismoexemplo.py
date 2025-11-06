@@ -1,6 +1,6 @@
 class Atacante:
     def gol(self):
-        print("o Atacante faz gol!")
+        print("------Funções Jogadores------\no Atacante faz gol!")
 
 class Meia:
     def gol(self):
