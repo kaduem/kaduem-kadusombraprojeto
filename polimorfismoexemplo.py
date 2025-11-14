@@ -28,8 +28,9 @@ for obj in objetos:
 #_________________________________________________________________________________________________
 print("------Funções Diretorias------")
 class Presidente:
-    def funcao(self):
-        print("o Presidente cuida do gerenciamento geral do clube!")
+    def funcao(self, presidente= None):
+        Presidente = input("Digite a função do presidente: ")
+        print(Presidente)
 
 class Treinadordegoleiro:
     def funcao(self):
